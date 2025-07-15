@@ -1,7 +1,7 @@
 use super::endianness::{swap_inplace, Endianness, SYS_ENDIANNESS};
 use std::io::{self, Error, ErrorKind, Seek, Write};
 
-pub trait BinaryWriterExt: Write + Seek {
+pub trait BinaryWriter: Write + Seek {
     fn write_u8(&mut self, value: u8) -> io::Result<()>;
     fn write_i8(&mut self, value: i8) -> io::Result<()>;
 
@@ -49,7 +49,7 @@ pub trait BinaryWriterExt: Write + Seek {
     fn write_nt_string(&mut self, value: &str) -> io::Result<()>;
 }
 
-impl<StreamT: Write + Seek> BinaryWriterExt for StreamT {
+impl<StreamT: Write + Seek> BinaryWriter for StreamT {
     /// Write an u8 to stream
     ///
     /// # Parameters
