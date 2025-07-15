@@ -1,0 +1,9 @@
+[package]
+authors = ["Zatarita"]
+name = "binre"
+version = "1.0.0"
+edition = "2021"
+description = "A Rust crate for adding binary parsing/serializing functionality to read/write traits."
+
+[dependencies]
+num-traits = "0.2.19"
