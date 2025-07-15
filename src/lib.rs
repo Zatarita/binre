@@ -3,9 +3,9 @@ mod binary_utils;
 mod binary_writer;
 mod endianness;
 
-pub use binary_reader::BinaryReader as BinaryReader;
+pub use binary_reader::BinaryReader;
 pub use binary_utils::BinaryUtils;
-pub use binary_writer::BinaryWriterExt as BinaryWriter;
+pub use binary_writer::BinaryWriter;
 pub use endianness::Endianness;
 
 #[cfg(test)]
